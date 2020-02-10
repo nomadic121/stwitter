@@ -1,4 +1,4 @@
-package com.example.servingwebcontent.domain;
+package springBootApp.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Message {
+public class MessageEntity {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
@@ -16,10 +16,10 @@ public class Message {
 
     private String tag;
 
-    public Message() {
+    public MessageEntity() {
     }
 
-    public Message(final String text, final String tag) {
+    public MessageEntity(final String text, final String tag) {
         this.text = text;
         this.tag = tag;
     }
